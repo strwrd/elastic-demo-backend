@@ -32,6 +32,8 @@ const loggerMiddleware: MiddlewareHandler = async (c, next) => {
       stack: c.error.stack,
     })
   } else {
+    apm.logger.info(log)
+
     logger.info(log)
   }
 }
